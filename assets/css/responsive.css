@@ -1,23 +1,254 @@
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 992px) and (max-width: 1200px) {
+    .hero-area .title {
+        margin-bottom: 30px;
+    }
+
+    .hero-list-item {
+        margin-top: 30px;
+    }
+
+    .hero-area {
+        padding-top: 140px;
+    }
+}
+
+@media (max-width: 991px) {   
+    .form-group .nice-select {
+        margin-top: 10px;
+    }
+
+    .form-group input[type=tel] {
+        margin-top: 30px;
+    }
+
+    .contact-from {
+        padding: 50px 40px;
+    }
+
+    .designs.development {
+        margin-top: 3px;
+    }
+
+    .designs {
+        margin-left: 0;
+        margin-top: 6px;
+    }
+
+    .we-design.development {
+        margin-left: 0;
+    }
+
+    .single-working-process {
+        width: 130px;
+        height: 130px;
+    }
+
+    .section-heading .title {
+        font-size: 60px;
+    }
+
+    .section-heading.mb-95 {
+        margin-bottom: 0;
+    }
+
+    .pt-100 {
+        padding-top: 70px;
+    }
+
+    .serve-with-simile .section-heading .title {
+        margin-bottom: 45px;
+    }
+
+    .feature-box {
+        margin-top: 70px;
+    }
+
+    .footer-bg {
+        margin-top: 70px;
+    }
     
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {   
-
+@media (max-width: 900px) {
+    .slow-down {
+        left: 20px;
+    }
+    .dot-menu-nav {
+        right: 20px;
+    }
 }
 
-@media (max-width: 575.98px) {
-    
+@media (max-width: 767px) {
+    .readmore-btn,
+    .we-design .readmore-btn {
+        height: 70px;
+        width: 70px;
+    }
+
+    .readmore-btn img {
+        width: 30px;
+    }
+
+    .digitaltab-box #v-pills-tab a:hover::after,
+    .digitaltab-box #v-pills-tab a.active::after {
+        height: 5px;
+        width: 100%;
+        bottom: 0;
+        top: auto;
+    }
+
+    .digitaltab-box #v-pills-tab a {
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    .digital-list {
+        display: block;
+    }
+
+    .digitaltab-box .nav {
+        padding-bottom: 5px;
+    }
+
+    .digitaltab-box #v-pills-tab a:hover,
+    .digitaltab-box #v-pills-tab a.active {
+        padding-left: 15px;
+    }
+
+    .footer-area .col-md-6 {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer-menu {
+        text-align: center;
+    }
+
+    .footer-menu ul {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .footer-logo {
+        float: none;
+    }
+
+    .social-links {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 710px) {
+    .hamburger-menu-trigger {
+        transform: translate(20px, 5px);
+    }
+
+    .site-logo {
+        transform: translateX(70px);
+    }
+
+    .hero-area .title {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-area .title {
+        font-size: 50px;
+    }
+
+    .section-heading .title {
+        font-size: 50px;
+    }
+
+    .pt-100 {
+        padding-bottom: 80px;
+    }
+
+    .section-heading .title {
+        margin-bottom: 30px;
+    }
+
+    .single-work {
+        width: 50%;
+        height: 250px !important;
+    }
+
+    .we-design {
+        height: 350px;
+    }
+
+    .single-design {
+        height: 210px;
+    }
+
+    .digital-creator .section-heading .video-play-btn {
+        right: 10px;
+        height: 40px;
+        width: 40px;
+        font-size: 20px;
+        line-height: 42px;
+    }
+
+    .footer-area.pt-100 {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 540px) {
+    .feature-content {
+        width: 100%;
+    }
+
+    .feature-box {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .feature-img {
+        position: inherit;
+        top: 0;
+        right: 0;
+        width: 180px;
+        margin-top: -35px;
+    }
+
+    .feature-box {
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
+
+    .feature-content img {
+        width: 30px;
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width: 480px) {
-    
+    .hero-area {
+        padding-bottom: 100px;
+    }
+}
+
+@media (max-width: 430px) {
+    .hero-list-item a {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 375px) {
-    
+    .single-design {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 320px) {
-    
+    .single-work {
+        width: 100%;
+        height: 260px !important;
+    }
 }

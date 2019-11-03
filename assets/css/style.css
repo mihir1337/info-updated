@@ -128,6 +128,7 @@ select {
 /* dot menu css */
 .dot-menu {
     position: relative;
+    z-index: 9;
 }
 
 .dot-menu-nav {
@@ -137,6 +138,7 @@ select {
     position: fixed;
     transform: translateY(-50%);
     text-align: center;
+    z-index: 9;
 }
 
 .dot-menu-nav li a {
@@ -175,6 +177,7 @@ select {
     position: absolute;
     width: 100%;
     padding-top: 40px;
+    z-index: 9;
 }
 
 .header-nav {
@@ -367,8 +370,8 @@ select {
     width: 100%;
     z-index: 99;
     background: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
     box-shadow: 0px 13px 25px -12px rgba(0, 0, 0, 0.1);
 }
 
@@ -389,18 +392,40 @@ select {
     color: #fff;
     font-size: 20px;
     padding: 150px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-area::after {
+    background-image: url(../images/Banner_Pattern.svg);
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
 }
 
 .hero-area .title {
     font-size: 70px;
     font-weight: 700;
     margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-area p {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-list-item a {
     font-size: 15px;
     display: block;
-    padding: 15px 20px;
+    padding: 15px 0px;
     color: #fff;
 }
 
@@ -408,27 +433,35 @@ select {
     display: flex;
     border: 1px solid #fff;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     border-radius: 40px;
     overflow: hidden;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
-.hero-list-item li a:nth-child(2) {
-    border-right: 13px solid;
+.hero-list-item ul li::after {
+    position: absolute;
+    right: 0;
+    content: "";
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: #fff;
 }
 
-.hero-list-item ul li:not(:last-child) {
-    border-right: 1px solid #fff;
+.hero-list-item ul li {
+    position: relative;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-list-item a:hover {
     background: #D3D7DB;
     color: #252525;
-}
-
-.hero-list-item ul li {
-    width: 25%;
 }
 
 .hero-list-item {
@@ -615,15 +648,16 @@ select {
     width: 100%;
     position: relative;
     overflow: hidden;
-    transition: all .2s;
+    transition: .3s;
+    backface-visibility: hidden;
 }
 
 .single-work:hover .thumb img {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .single-work .thumb img {
-    transition: all .2s;
+    transition: .3s;
 }
 
 .single-work .thumb::after {
@@ -634,7 +668,8 @@ select {
     width: 100%;
     height: 100%;
     background-image: url(../images/image-overlay.png);
-    background-size: contain;
+    background-size: cover;
+    background-position: bottom center;
 }
 
 .single-work .thumb img {
@@ -732,8 +767,8 @@ select {
     margin-bottom: 15px;
 }
 
-.single-design:hover .content {
-    transition: all .3s;
+.single-design .content {
+    transition: .3s;
 }
 
 .single-design:hover .icon,
@@ -768,6 +803,10 @@ select {
     margin-right: 0;
     margin-left: 0;
     margin-top: 8px;
+}
+
+.we-design.development .content span {
+    color: #21A16F;
 }
 
 .designs.development .single-design:nth-child(1) {
@@ -821,6 +860,10 @@ select {
 .digital-creator .section-heading .video-play-btn:hover {
     background: #DB4827;
     color: #fff;
+}
+
+.digitaltab-box .nav {
+    padding-bottom: 35px;
 }
 
 .digitaltab-box #v-pills-tab a {
@@ -902,6 +945,7 @@ select {
     padding: 15px 0;
     color: #A2A2A2;
     font-weight: 600;
+    transition: .3s
 }
 
 .form-group {
@@ -927,6 +971,7 @@ select {
     color: #fff;
     margin-top: 20px;
     font-weight: 600;
+    border-radius: 40px;
 }
 
 .form-group.submit {
@@ -974,10 +1019,7 @@ select {
 .footer-bg {
     height: 18px;
     margin-top: 95px;
-}
-
-.footer-bg img {
-    width: 100%;
+    position: relative;
 }
 
 .footer-menu ul {
@@ -1052,7 +1094,7 @@ select {
     bottom: 26px;
     position: fixed;
     z-index: 899;
-    left: 115px;
+    left: 70px;
 }
 
 .slow-down .white-area-scroll,
@@ -1063,4 +1105,48 @@ select {
 .slow-down img {
     height: 35px;
     margin-top: 15px;
+}
+
+.scroll-dark .default-scroll {
+    display: none;
+}
+
+.scroll-dark .white-area-scroll {
+    display: block;
+}
+
+.scroll-dark .slow-down span {
+    color: #15202B;
+}
+
+.scroll-dark.scroll-white .default-scroll {
+    display: block;
+}
+
+.scroll-dark.scroll-white .white-area-scroll {
+    display: none;
+}
+
+.scroll-dark.scroll-white .slow-down span {
+    color: #fff;
+}
+
+.scroll-dark.scroll-white.dark .default-scroll {
+    display: none;
+}
+
+.scroll-dark.scroll-white.dark .white-area-scroll {
+    display: block;
+}
+
+.scroll-dark.scroll-white.dark .slow-down span {
+    color: #15202B;
+}
+
+.scroll-dark.scroll-white.dark .slow-down.todown {
+    display: none;
+}
+
+.scroll-dark.scroll-white.dark .slow-down.totop {
+    display: block;
 }

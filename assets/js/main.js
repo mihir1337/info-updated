@@ -87,7 +87,7 @@
 	});
 	
 	// menu options custom affix
-	var dark_bg = $(".dot-menu-nav");
+	var dark_bg = $(".dot-menu-nav, .dot-menu");
 	$(window).on("scroll", function () {
 		if ($(window).scrollTop() > 550) {
 			dark_bg.addClass("black");
@@ -98,7 +98,7 @@
 
 	var white_bg = $(".dot-menu-nav");
 	$(window).on("scroll", function () {
-		if ($(window).scrollTop() > 3600) {
+		if ($(window).scrollTop() > 3550) {
 			white_bg.addClass("white");
 		} else {
 			white_bg.removeClass("white");
@@ -114,8 +114,36 @@
 		}
 	});
 
+	// scroll down js
+	var scrollDark = $("body");
+	$(window).on("scroll", function () {
+		if ($(window).scrollTop() > 350) {
+			scrollDark.addClass("scroll-dark");
+		} else {
+			scrollDark.removeClass("scroll-dark");
+		}
+	});
+
+	var scrollWhite = $("body");
+	$(window).on("scroll", function () {
+		if ($(window).scrollTop() > 3400) {
+			scrollWhite.addClass("scroll-white");
+		} else {
+			scrollWhite.removeClass("scroll-white");
+		}
+	});
+
+	var scrollDarkk = $("body");
+	$(window).on("scroll", function () {
+		if ($(window).scrollTop() > 6300) {
+			scrollDarkk.addClass("dark");
+		} else {
+			scrollDarkk.removeClass("dark");
+		}
+	});
+
 	// Smooth scrolling
-	$('.slow-down a').click(function () {
+	$('.slow-down a, .hamburger-menu-list li a').click(function () {
 		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
 			location.hostname == this.hostname) {
 			var $target = $(this.hash);
