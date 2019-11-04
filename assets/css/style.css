@@ -459,13 +459,16 @@ select {
     align-items: center;
 }
 
-.hero-list-item a:hover {
-    background: #D3D7DB;
-    color: #252525;
-}
-
 .hero-list-item {
     margin-top: 50px;
+}
+
+.hero-list-item ul li:hover {
+    background: #D3D7DB;
+}
+
+.hero-list-item ul li:hover a {
+    color: #252525;
 }
 
 /* user experience area */
