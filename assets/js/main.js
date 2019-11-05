@@ -2,17 +2,15 @@
     'use strict';
 
     $(window).on("load", function() {
-
 		background();
 		galleryMasonary();
 	    //preloader
 	    $("#preloader").delay(300).animate({
-	      "opacity" : "0"
-	      }, 500, function() {
-	      $("#preloader").css("display","none");
+	    "opacity" : "0"
+	    }, 500, function() {
+	    	$("#preloader").css("display","none");
 		});
-
-	  });
+	});
 
 
     // background image
@@ -159,7 +157,29 @@
 			}
 		}
 	});
-	  
+
+	var $grid = $(".portfolio-lists")
+
+	// filter functions
+	var filterFns = {};
+	// bind filter button click
+	$('.portfolio-nav ul').on('click', 'li', function () {
+		var filterValue = $(this).attr('data-filter');
+		// use filterFn if matches value
+		filterValue = filterFns[filterValue] || filterValue;
+		$grid.isotope({
+			filter: filterValue
+		});
+	});
+
+	// change is-checked class on buttons
+	$('.portfolio-nav ul').each(function (i, buttonGroup) {
+		var $buttonGroup = $(buttonGroup);
+		$buttonGroup.on('click', 'li', function () {
+			$buttonGroup.find('.active').removeClass('active');
+			$(this).addClass('active');
+		});
+	});
 
 
 
