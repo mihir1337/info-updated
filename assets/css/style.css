@@ -1324,3 +1324,8 @@ select {
     width: 100%;
 }
 
+.single-portfolio .content h4 {
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
